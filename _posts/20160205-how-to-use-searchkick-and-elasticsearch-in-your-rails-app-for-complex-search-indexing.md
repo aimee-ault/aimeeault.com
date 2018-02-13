@@ -1,15 +1,12 @@
-title: How to Use Searchkick and ElasticSearch in Your Rails App For Complex Search Indexing
-link: http://aimeeault.com/2016/02/05/how-to-use-searchkick-and-elasticsearch-in-your-rails-app-for-complex-search-indexing/
-author: aimeeault
-description: 
-post_id: 1642
-created: 2016/02/05 23:44:30
-created_gmt: 2016/02/05 23:44:30
-comment_status: open
-post_name: how-to-use-searchkick-and-elasticsearch-in-your-rails-app-for-complex-search-indexing
-status: publish
-post_type: post
-
+---
+layout: inner
+position: left
+title: 'How to Use Searchkick and ElasticSearch in Your Rails App For Complex Search Indexing'
+date: 2016-02-05 23:44:30
+categories: Programming
+tags: development code ruby
+featured_image: ''
+---
 # How to Use Searchkick and ElasticSearch in Your Rails App For Complex Search Indexing
 
 For reasons that elude me, I have always been obsessed with "speedcoding." That is, I like to see how fast I can implement a very large feature in a ridiculously short amount of time. I won't lie: this kind of trait goes hand-in-hand with phrases like "cowboy coding" and "Balmer peak," and with age, I've largely outgrown it, but the mood still hits me every now and then. I recently enjoyed one of these moments while toying around with some code for [Treehouse](http://teamtreehouse.com), for the fun of it. ![imageedit_5_3400066282](/wp-content/uploads/2016/02/imageedit_5_3400066282.gif) In a past life, I spent about a year working on a team for [DeviantArt](http://www.deviantart.com) whose sole purpose was to improve search results on the site. If you were not aware, DeviantArt's search is done entirely in-house by people who have PhDs in math. They're brilliant people who will talk your ears off about facets, scoring, histograms, and tagging metadata. I didn't work on any of the search indexing services myself (which were all written in C++), but I was heavily exposed to the bits of it that were included in the main app, written in PHP. And as a result of that, I know more about search indexing than I'd like to say I know. 
