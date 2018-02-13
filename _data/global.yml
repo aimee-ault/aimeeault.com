@@ -1,7 +1,7 @@
 # Site Settings
 title: "Hello. I'm Aimee Ault."
 description: "I'm a software developer."
-url: 'http://aimee-ault.github.io/aimeeault.com/' # the base hostname & protocol for your site
+url: 'https://aimee-ault.github.io/aimeeault.com/' # the base hostname & protocol for your site
 nav: "true"
 footer_text: '© 2018 Aimee Ault'
 twitter: 'aimee_ebooks'
