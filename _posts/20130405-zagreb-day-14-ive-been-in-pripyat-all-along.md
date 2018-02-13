@@ -1,14 +1,12 @@
-title: Zagreb, Day 14: I've Been in Pripyat All Along!
-link: http://aimeeault.com/2013/04/05/zagreb-day-14-ive-been-in-pripyat-all-along/
-author: aimeeault
-description: 
-post_id: 517
-created: 2013/04/05 15:37:26
-created_gmt: 2013/04/05 15:37:26
-comment_status: open
-post_name: zagreb-day-14-ive-been-in-pripyat-all-along
-status: publish
-post_type: post
+---
+layout: inner
+position: left
+title: 'Zagreb, Day 14: I've Been in Pripyat All Along!'
+date: 2013-04-05 15:37:26
+categories: personal
+tags: travel
+featured_image: ''
+---
 
 # Zagreb, Day 14: I've Been in Pripyat All Along!
 
