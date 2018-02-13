@@ -1,7 +1,7 @@
 ---
 layout: inner
 position: left
-title: 'Zagreb, Day 14: I\'ve Been in Pripyat All Along!'
+title: 'Zagreb, Day 14: Pripyat All Along!'
 date: 2013-04-05 15:37:26
 categories: personal
 tags: travel
