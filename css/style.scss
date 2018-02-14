@@ -242,7 +242,6 @@ button.btn, input.btn {
 }
 
 .content-wrap {
-  margin-bottom: 8em;
   @include bp-xsmall {
     margin-bottom: 2em;
   }
@@ -258,7 +257,6 @@ button.btn, input.btn {
     }
   }
   .content {
-    margin-top: 5em;
     margin-left: 5em;
     @include bp-xsmall {
       margin-left: 0;
@@ -266,6 +264,7 @@ button.btn, input.btn {
     h3.title {
       position: relative;
       margin-bottom: 1.5em;
+      font-size: 20px;
       &:after {
         content: '';
         position: absolute;
