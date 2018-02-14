@@ -104,13 +104,10 @@ button.btn, input.btn {
 /*--------------------------------------------------------------
 	2.0 Home Hero
 --------------------------------------------------------------*/
-.bg {
-  background: url('https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/1913413_10102094494802547_323848627_o.jpg?oh=f33e444cc788697d68e968bf718b23e1&oe=5B065408') no-repeat;
-  background-size: 100% 600px;
-  top: -100px;
-  width: 100%;
-  height: 600px;
-  position: absolute;
+.bio-pic {
+  width: 300px;
+  border-radius: 50%;
+  margin-bottom: 30px;
 }
 .hero-container {
   margin: 10em 0 9em 0;
