@@ -9,7 +9,9 @@ tags: code ruby rails elasticsearch
 
 # How to Use Searchkick and ElasticSearch in Your Rails App For Complex Search Indexing
 
-For reasons that elude me, I have always been obsessed with "speedcoding." That is, I like to see how fast I can implement a very large feature in a ridiculously short amount of time. I won't lie: this kind of trait goes hand-in-hand with phrases like "cowboy coding" and "Balmer peak," and with age, I've largely outgrown it, but the mood still hits me every now and then. I recently enjoyed one of these moments while toying around with some code for [Treehouse](http://teamtreehouse.com), for the fun of it. ![imageedit_5_3400066282](/wp-content/uploads/2016/02/imageedit_5_3400066282.gif) In a past life, I spent about a year working on a team for [DeviantArt](http://www.deviantart.com) whose sole purpose was to improve search results on the site. If you were not aware, DeviantArt's search is done entirely in-house by people who have PhDs in math. They're brilliant people who will talk your ears off about facets, scoring, histograms, and tagging metadata. I didn't work on any of the search indexing services myself (which were all written in C++), but I was heavily exposed to the bits of it that were included in the main app, written in PHP. And as a result of that, I know more about search indexing than I'd like to say I know.
+For reasons that elude me, I have always been obsessed with "speedcoding." That is, I like to see how fast I can implement a very large feature in a ridiculously short amount of time. I won't lie: this kind of trait goes hand-in-hand with phrases like "cowboy coding" and "Balmer peak," and with age, I've largely outgrown it, but the mood still hits me every now and then. I recently enjoyed one of these moments while toying around with some code for [Treehouse](http://teamtreehouse.com), for the fun of it. 
+
+In a past life, I spent about a year working on a team for [DeviantArt](http://www.deviantart.com) whose sole purpose was to improve search results on the site. If you were not aware, DeviantArt's search is done entirely in-house by people who have PhDs in math. They're brilliant people who will talk your ears off about facets, scoring, histograms, and tagging metadata. I didn't work on any of the search indexing services myself (which were all written in C++), but I was heavily exposed to the bits of it that were included in the main app, written in PHP. And as a result of that, I know more about search indexing than I'd like to say I know.
 
 ### CloudSearch or Ransack?
 
@@ -17,11 +19,40 @@ So, seeing poorly implemented search indexing tools also causes me mental anguis
 
 ### Searchkick to the Rescue
 
-I recently decided to see what would happen if I used ElasticSearch for a fairly complex search, using a gem called [Searchkick](https://github.com/ankane/searchkick). I really like Searchkick because out-of-the-box, there's no configuration needed. If you want to index your User model, it's as simple as adding the gem to your Gemfile and a `searchkick` directive to the class: ` source "https://rubygems.org" ruby "2.2.3" ... gem "searchkick" ... ` ` class User < ActiveRecord::Base searchkick end ` And then reindexing the model: ` pry(main)> User.reindex ` The cool thing here is that you can also do your reindexing asynchronously so that it won't block processes or have a dramatic impact on your application's performance. You can then search all attributes of `User` (i.e. name, e-mail, city) like so: ` pry(main)> User.search("bob") ` And you'll find plenty of demos and tutorials for that all over the place, but who ever needs the simplest use case?
+I recently decided to see what would happen if I used ElasticSearch for a fairly complex search, using a gem called [Searchkick](https://github.com/ankane/searchkick). I really like Searchkick because out-of-the-box, there's no configuration needed. If you want to index your User model, it's as simple as adding the _searchkick_ gem to your Gemfile and a directive to the class:
+
+```ruby
+class User < ActiveRecord::Base 
+  searchkick 
+end
+```
+
+And then reindexing the model: 
+```ruby 
+pry(main)> User.reindex 
+``` 
+
+The cool thing here is that you can also do your reindexing asynchronously so that it won't block processes or have a dramatic impact on your application's performance. You can then search all attributes of User (i.e. name, e-mail, city) like so: 
+
+```ruby
+pry(main)> User.search("bob") 
+``` 
+
+And you'll find plenty of demos and tutorials for that all over the place, but who ever needs the simplest use case?
 
 #### I had a few different needs:
 
-1\. Because Searchkick uses ElasticSearch, you can't chain scopes off of the model prior to running the search like so: ` pry(main) > User.active.search("bob") ` I mean, you can, but -- it'll ignore the named scope and still run your search against _all_ `User` records. So I needed to be able to account for different scopes, and the above piece of code simply does not work and cannot be made to work. 2\. I needed to be able to sort my results by a variety of things which weren't necessarily attributes on the model itself. For example: I needed to sort by the time difference between the model's `created_at` attribute and its `updated_at` attribute. Or I needed to sort by the `created_at` timestamp on a child association. ElasticSearch's DSL supports a sort order constraint, but how do you sort by a value that isn't indexed with the model? 3\. As I started to index more things, I noticed my controller logic was growing wily. I needed some sort of presenter type class or simply a PORO to organize my Searchkick search. So I'm going to walk through how I developed this search feature, stopping to explain my thought process along the way. Because I didn't feel like getting sued by my employer for any potential intellectual property theft, I've used a completely different search feature that has absolutely nothing to do with what I was originally building a search for. Once I was finished writing this code, I was able to roll out a second sortable, filterable, search tool for another model in about 20 minutes reusing the same pattern.
+* Because Searchkick uses ElasticSearch, you can't chain scopes off of the model prior to running the search like so: 
+
+```ruby 
+pry(main) > User.active.search("bob") 
+``` 
+
+I mean, you can, but it'll ignore the named scope and still run your search against _all_ User records. So I needed to be able to account for different scopes, and the above piece of code simply does not work and cannot be made to work. 
+
+* I needed to be able to sort my results by a variety of things which weren't necessarily attributes on the model itself. For example: I needed to sort by the time difference between the model's created_at attribute and its updated_at attribute. Or I needed to sort by the created_at timestamp on a child association. ElasticSearch's DSL supports a sort order constraint, but how do you sort by a value that isn't indexed with the model? 
+
+* As I started to index more things, I noticed my controller logic was growing wily. I needed some sort of presenter type class or simply a PORO to organize my Searchkick search. So I'm going to walk through how I developed this search feature, stopping to explain my thought process along the way. Because I didn't feel like getting sued by my employer for any potential intellectual property theft, I've used a completely different search feature that has absolutely nothing to do with what I was originally building a search for. Once I was finished writing this code, I was able to roll out a second sortable, filterable, search tool for another model in about 20 minutes reusing the same pattern.
 
 ### Where I Started
 
