@@ -57,6 +57,15 @@ ul {
     margin-bottom: 30px;
 }
 
+h2 {
+  color: #5ec7cc
+}
+
+h3 {
+  margin-top: 30px;
+  color: #b5d8ce;
+}
+
 a {
   @include transition(color .2s ease-in-out);
   &:hover {
