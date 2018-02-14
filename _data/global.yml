@@ -1,6 +1,6 @@
 # Site Settings
 title: "Hello. I'm Aimee Ault."
-description: "I'm a software developer."
+description: "I'm a software developer. Formerly a lead engineer at DeviantArt. Currently a senior developer at Treehouse."
 url: 'https://aimee-ault.github.io/aimeeault.com/' # the base hostname & protocol for your site
 nav: "true"
 footer_text: '© 2018 Aimee Ault'
