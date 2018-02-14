@@ -5,7 +5,6 @@ permalink: /about/
 ---
 
 ## Saluton!
---
 
 My name is Aimee Ault. I'm a developer (sometimes of the senior flavor, sometimes of the lead, sometimes of the web variety), a language fanatic, and a full-time pair programming partner to a 1-year-old who specializes in a functional programming language that no one else understands the syntax to.
 
