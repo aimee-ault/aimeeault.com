@@ -17,15 +17,18 @@
             <div class="break"></div>
 
             {% for post in paginator.posts %}
-              test!
               <div class="wow fadeIn">
-              {% if post.position == "left" %}
-                {% include content-left.html %}
-              {% endif %}
+                <div class="content-wrap">
 
-              {% if post.position == "right" %}
-                {% include content-right.html %}
-              {% endif %}
+                  <div class="row">
+
+                    <div class="col-xs-12 col-md-12">
+                      {% include post-content.html %}
+                    </div>
+
+                  </div>
+
+                </div>
               </div>
             {% endfor %}
 
