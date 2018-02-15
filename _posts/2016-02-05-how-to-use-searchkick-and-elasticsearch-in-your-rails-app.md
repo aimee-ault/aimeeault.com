@@ -28,7 +28,6 @@ end
 ```
 
 And then reindexing the model:
-
 ```ruby
 pry(main)> User.reindex
 ```
@@ -404,7 +403,7 @@ A former coworker of mine also shared with me an interesting, alternative approa
 
 #### "I hate service objects and think aspect-oriented programming is the way of the future!"
 
-That's fine and I understand there's a couple of different ways you could propose to architect the code I wrote here. Instead of building a service object, you could make a Searchable aspects module that is included in your model and override the {% ihighlight ruby %}where{% endihighlight %} and {% ihighlight ruby %}order{% endihighlight %} methods within your model instead of building separate search classes. On one hand, I'm not a gigantic fan of this because it places logic that doesn't belong on the model in the model. On the other hand, if you look at how `Searchkick` works, it's already doing this by forcing you to override its `search_data` method on the model. In short: ¯\_(ツ)_/¯
+That's fine and I understand there's a couple of different ways you could propose to architect the code I wrote here. Instead of building a service object, you could make a Searchable aspects module that is included in your model and override the `where` and `order` methods within your model instead of building separate search classes. On one hand, I'm not a gigantic fan of this because it places logic that doesn't belong on the model in the model. On the other hand, if you look at how `Searchkick` works, it's already doing this by forcing you to override its `search_data` method on the model. In short: ¯\_(ツ)_/¯
 
 #### Code Climate and Flog
 
