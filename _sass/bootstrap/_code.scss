@@ -60,6 +60,10 @@ pre {
   }
 }
 
+pre.lineno {
+  border-right: 1px solid;
+}
+
 // Enable scrollable blocks of code
 .pre-scrollable {
   max-height: $pre-scrollable-max-height;
