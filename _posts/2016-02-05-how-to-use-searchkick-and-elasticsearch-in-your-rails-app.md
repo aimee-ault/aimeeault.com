@@ -400,22 +400,12 @@ end
 
 I added a new method called `search_class` that raises a "Not Implemented" error on the base class. If the child class fails to implement that, as it should since it specifies which model to search, that error will be raised. Because we were able to extract so much into the base class, the `MovieSearch` only had to include the `search_class` method and a `where` method for movie-specific filtering logic. You could potentially override the `order` method as well if you wanted to have a default sort order, like say, if you were filtering by the director's death date, you always wanted to make sure you sorted results by that attribute in descending order.
 
-### Final Thoughts
-
-#### Cache-busting
+### Cache-busting
 
 There's a lot more you could do here. I just wanted to dig in a little bit beneath the surface of all the tutorials that choose to cover the most basic use case. One thing, I'd like to point out though is that when you use ElasticSearch on a model that has child associations in its search data, you'll need to make sure that the parent model gets reindexed when the child object gets altered. Searchkick automatically reindexes when the model itself changes, so just as you would handle cache-busting, you need to make sure your associations have a `touch: true` directive to trigger this reindexing!
 
 A former coworker of mine also shared with me an interesting, alternative approach to handling these kinds of issues by [adding instrumentation to the child model's lifecycle that notifies](http://api.rubyonrails.org/classes/ActiveSupport/Notifications.html) when it needs to be reindexed and then subscribing to those notifications to ensure that a reindex takes place. I really like this approach too and would heavily advocate it if your searches start to get heavily burdened by ActiveRecord associations.
 
-#### "I hate service objects and think aspect-oriented programming is the way of the future!"
+### Final Thoughts
 
-That's fine and I understand there's a couple of different ways you could propose to architect the code I wrote here. Instead of building a service object, you could make a Searchable aspects module that is included in your model and override the `where` and `order` methods within your model instead of building separate search classes. On one hand, I'm not a gigantic fan of this because it places logic that doesn't belong on the model in the model. On the other hand, if you look at how `Searchkick` works, it's already doing this by forcing you to override its `search_data` method on the model. In short: ¯\_(ツ)_/¯
-
-#### Code Climate and Flog
-
-True story: Flog will hate you if you have even the slightest bit of complexity in your `search_data` methods and if you choose to extract out relational data into their own methods in cases where you were needing to pass blocks to `map`, you'll start to get that stinky feeling that you're violating the [Law of Demeter](http://c2.com/cgi/wiki/LawOfDemeter?LawOfDemeter). So, in a way, I feel like having `search_data` on the model is a code smell that Searchkick forces you to commit, but, to reiterate: ¯\_(ツ)_/¯
-
-#### "I love you for writing this but I know something you don't know and want to contribute!" / "I love you for writing this but I'm a hands-on learner and want to download the code to play with myself!"
-
-Did you find this article useful but want to have a more hands-on learning experience? Good news! I've [put this code on Github](https://github.com/aimee-ault/SearchkickSearch) where you can clone it and play with it on your own.
+Did you find this article useful but want to have a more hands-on learning experience? Good news! I've [put this code on Github](https://github.com/aimee-ault/SearchkickSearch) where you can clone it and play with it on your own. I'm deeply appreciative of any pull requests submitted to this repo and will happily give you credit here along with a link to your own Github profile and/or website for any contributions.
