@@ -32,7 +32,7 @@ And then reindexing the model:
 pry(main)> User.reindex
 ```
 
-The cool thing here is that you can also do your reindexing asynchronously so that it won't block processes or have a dramatic impact on your application's performance. You can then search all attributes of User (i.e. name, e-mail, city) like so:
+The cool thing here is that you can also do your reindexing asynchronously so that it won't block processes or have a dramatic impact on your application's performance. You can then search all attributes of `User` (i.e. name, e-mail, city) like so:
 
 ```ruby
 pry(main)> User.search("bob")
@@ -40,24 +40,34 @@ pry(main)> User.search("bob")
 
 And you'll find plenty of demos and tutorials for that all over the place, but who ever needs the simplest use case?
 
-#### I had a few different needs:
+### I had a couple of different needs.
 
-* Because Searchkick uses ElasticSearch, you can't chain scopes off of the model prior to running the search like so:
+#### Scoping
+
+Because Searchkick uses ElasticSearch, you can't chain scopes off of the model prior to running the search like so:
 
 ```ruby
 pry(main) > User.active.search("bob")
 ```
 
-I mean, you can, but it'll ignore the named scope and still run your search against _all_ User records. So I needed to be able to account for different scopes, and the above piece of code simply does not work and cannot be made to work.
+I mean, you can, but it'll ignore the named scope and still run your search against _all_ `User` records. So I needed to be able to account for different scopes, and the above piece of code simply does not work and cannot be made to work.
 
-* I needed to be able to sort my results by a variety of things which weren't necessarily attributes on the model itself. For example: I needed to sort by the time difference between the model's created_at attribute and its updated_at attribute. Or I needed to sort by the created_at timestamp on a child association. ElasticSearch's DSL supports a sort order constraint, but how do you sort by a value that isn't indexed with the model?
-* As I started to index more things, I noticed my controller logic was growing wily. I needed some sort of presenter type class or simply a PORO to organize my Searchkick search. So I'm going to walk through how I developed this search feature, stopping to explain my thought process along the way. Because I didn't feel like getting sued by my employer for any potential intellectual property theft, I've used a completely different search feature that has absolutely nothing to do with what I was originally building a search for. Once I was finished writing this code, I was able to roll out a second sortable, filterable, search tool for another model in about 20 minutes reusing the same pattern.
+#### Sorting
+
+I needed to be able to sort my results by a variety of things which weren't necessarily attributes on the model itself. For example: I needed to sort by the time difference between the model's `created_at` attribute and its `updated_at` attribute. Or I needed to sort by the `created_at` timestamp on a child association. ElasticSearch's DSL supports a sort order constraint, but how do you sort by a value that isn't indexed with the model?
+
+#### Simplification
+
+As I started to index more things, I noticed my controller logic was growing wily. I needed some sort of presenter type class or simply a PORO to organize my Searchkick search.
+
+So I'm going to walk through how I developed this search feature, stopping to explain my thought process along the way. Because I didn't feel like getting sued by my employer for any potential intellectual property theft, I've used a completely different search feature that has absolutely nothing to do with what I was originally building a search for. Once I was finished writing this code, I was able to roll out a second sortable, filterable, search tool for another model in about 20 minutes reusing the same pattern.
 
 ### Where I Started
 
-I wanted to index a model called Movie. Each Movie is directed by a Director and has many Actor records through a relational model called ActorRole. Searchkick allows you to override which columns are used in searches via a method called search_data.
+I wanted to index a model called `Movie`. Each `Movie` is directed by a `Director` and has many `Actor` records through a relational model called `ActorRole`. Searchkick allows you to override which columns are used in searches via a method called `search_data`.
 
 My first step is to find out what things I need to index here!
+
 ```ruby
 class Movie < ActiveRecord::Base
   searchkick
@@ -76,7 +86,7 @@ class Movie < ActiveRecord::Base
 end
 ```
 
-What this does is allow me to continue indexing the attributes on the model itself, but also includes a couple of other pieces of denormalized data from associations, namely the name of the Director who directed the Movie and the names of anyone who acted in the movie, both pieces of data that are _not_ stored on the Movie record. So, assuming that I have a Movie with the title "[The Room](https://www.youtube.com/watch?v=aYRydundnt8)" directed by esteemed actor, director, and writer Tommy Wiseau, I can now search for "Tommy Wiseau" and "The Room" will be one of my search results--both because he acted in the movie and directed it.
+What this does is allow me to continue indexing the attributes on the model itself, but also includes a couple of other pieces of denormalized data from associations, namely the name of the `Director` who directed the `Movie` and the names of anyone who acted in the movie, both pieces of data that are _not_ stored on the `Movie` record. So, assuming that I have a `Movie` with the title "[The Room](https://www.youtube.com/watch?v=pKAwXLVxuZQ)" directed by esteemed actor, director, and writer Tommy Wiseau, I can now search for "Tommy Wiseau" and "The Room" will be one of my search results--both because he acted in the movie and directed it.
 
 If you're used to working with relational databases, seeing denormalized data stored this way might bother you, but it shouldn't. Remember, the purpose of these indices is for aiding in searching, not for data management. Your indices do not need to look pretty--they need to simply be a collection of values that you search with, mapped to their respective data types. That's _why_ it's a separate data store from your primary database, afterall.
 
@@ -96,10 +106,7 @@ end
 
 As you can see, the search method, provided by Searchkick, takes 2 parameters. The first is a query string. The second is an options hash. Already, I'm passing two options to set up pagination support. You might imagine how hairy this will start to get once I need to do more complex search functionality.
 
-**I'd like to move this logic into its own service object for a couple of reasons:**
-
-1. I'm a big fan of keeping controller actions skinny (as most Sandi Metz fans are)
-2. If I later decide to add additional searches, I am likely going to reuse this logic. So let's do that.
+I'd like to move this logic into its own service object for a couple of reasons: I'm a big fan of keeping controller actions skinny (as most Sandi Metz fans are) and also if I later decide to add additional searches, I am likely going to reuse this logic. So let's do that.
 
 ```ruby
 class MovieSearch
@@ -171,7 +178,7 @@ class MovieSearch
 end
 ```
 
-These are simple use cases. But what if you wanted to filter on something a bit less obvious that doesn't necessarily seem like it would be a search keyword--like say, filtering Movie based on whether the director is still alive or has died before a certain date. Sure, that's not a common thing to filter on, but a majority of our lives as developers are building out logic that has some special meaning to our product or customer, otherwise we'd all be using pre-existing open source software and calling it a day.
+These are simple use cases. But what if you wanted to filter on something a bit less obvious that doesn't necessarily seem like it would be a search keyword--like say, filtering `Movie` based on whether the director is still alive or has died before a certain date. Sure, that's not a common thing to filter on, but a majority of our lives as developers are building out logic that has some special meaning to our product or customer, otherwise we'd all be using pre-existing open source software and calling it a day.
 
 To do this, I need to add that denormalized data to the search index.
 
@@ -409,7 +416,6 @@ That's fine and I understand there's a couple of different ways you could propos
 
 True story: Flog will hate you if you have even the slightest bit of complexity in your `search_data` methods and if you choose to extract out relational data into their own methods in cases where you were needing to pass blocks to `map`, you'll start to get that stinky feeling that you're violating the [Law of Demeter](http://c2.com/cgi/wiki/LawOfDemeter?LawOfDemeter). So, in a way, I feel like having `search_data` on the model is a code smell that Searchkick forces you to commit, but, to reiterate: ¯\_(ツ)_/¯
 
-#### "I love you for writing this but I know something you don't know and want to contribute!" /
-"I love you for writing this but I'm a hands-on learner and want to download the code to play with myself!"
+#### "I love you for writing this but I know something you don't know and want to contribute!" / "I love you for writing this but I'm a hands-on learner and want to download the code to play with myself!"
 
 Did you find this article useful but want to have a more hands-on learning experience? Good news! I've [put this code on Github](https://github.com/aimee-ault/SearchkickSearch) where you can clone it and play with it on your own.

@@ -72,6 +72,10 @@ h3 {
   color: #b5d8ce;
 }
 
+h4 {
+  margin: 20px 0;
+}
+
 a {
   @include transition(color .2s ease-in-out);
   &:hover {
