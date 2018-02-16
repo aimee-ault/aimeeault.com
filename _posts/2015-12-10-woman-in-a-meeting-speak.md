@@ -46,7 +46,7 @@ Your soft skills as a developer are just as valuable as your hard skills. These 
 
 ### Don’t Acknowledge Your Weaknesses to Deflect Your Strengths
 
-### Things you might be tempted to say:
+#### Things you might be tempted to say:
 
 * “You probably know more about this than me”
 * “I’m not an expert”
