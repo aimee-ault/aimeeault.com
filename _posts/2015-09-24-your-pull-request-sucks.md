@@ -29,12 +29,12 @@ This is a pull request I did within my first month of working for Treehouse:
 
 #### Here’s why it sucks:
 
-1. What is “the right thing”?
-2. There’s mention of BugSnag, but no link to the actual error in BugSnag.
-3. “Make bugsnag stop crying” is very, very colloquial language. This is more of a nitpick on myself than anything, but if another developer were to look at this and speak English as a second language or not speak the same dialect of English as me, they might be ever-so-slightly confused by that description.
-4. No explanation of what I changed.
-5. Or why I changed it (other than to stop an error from occurring)
-6. This pull request was almost certainly an emergency hotfix. In fact, I’m pretty sure it was me hotfixing _someone else‘s_ code. Which, for all practical purposes, is the ideal situation for writing a very well-formed pull request (and tagging the responsible party!). It was a one-line change that adds a presence check to a variable. But a year and a half later, I don’t have any context for what this change was related to, which previous commit caused the issue I was fixing, or if there was even a GitHb issue logged for it. The pull request was reviewed and merged and probably was okay, but the title and description for it are horrid!
+* What is “the right thing”?
+* There’s mention of BugSnag, but no link to the actual error in BugSnag.
+* “Make bugsnag stop crying” is very, very colloquial language. This is more of a nitpick on myself than anything, but if another developer were to look at this and speak English as a second language or not speak the same dialect of English as me, they might be ever-so-slightly confused by that description.
+* No explanation of what I changed.
+* Or why I changed it (other than to stop an error from occurring)
+* This pull request was almost certainly an emergency hotfix. In fact, I’m pretty sure it was me hotfixing _someone else‘s_ code. Which, for all practical purposes, is the ideal situation for writing a very well-formed pull request (and tagging the responsible party!). It was a one-line change that adds a presence check to a variable. But a year and a half later, I don’t have any context for what this change was related to, which previous commit caused the issue I was fixing, or if there was even a GitHb issue logged for it. The pull request was reviewed and merged and probably was okay, but the title and description for it are horrid!
 
 **Reviewing a pull request should not make someone feel like they are solving a dramatic mystery.**
 
