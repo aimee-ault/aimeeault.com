@@ -46,18 +46,18 @@ This is a pull request I did within my first month of working for Treehouse:
 
 #### Here’s why it’s okay (but not necessarily good):
 
-1. It references an issue (which is not always going to be available if you are building a feature or handling tech debt, but in this case, it’s applicable)
-2. It humanely explains how a model works prior to the changes to give the reviewer a comparative understanding of what changes they are about to review. After all, not every developer intimately knows all the logical constraints of every class in the application they work on.
-3. It explains why there is a problem with that model’s behavior both in terms of application logic and actual use case.
-4. It proposes a solution in response to the problem explained.
-5. It explains additional requirements related to the pull request (needing to run a job to fix data)
-6. It acknowledges room for future improvements that might be outside of the scope of the pull request, in case those do come up in the discussion.
+* It references an issue (which is not always going to be available if you are building a feature or handling tech debt, but in this case, it’s applicable)
+* It humanely explains how a model works prior to the changes to give the reviewer a comparative understanding of what changes they are about to review. After all, not every developer intimately knows all the logical constraints of every class in the application they work on.
+* It explains why there is a problem with that model’s behavior both in terms of application logic and actual use case.
+* It proposes a solution in response to the problem explained.
+* It explains additional requirements related to the pull request (needing to run a job to fix data)
+* It acknowledges room for future improvements that might be outside of the scope of the pull request, in case those do come up in the discussion.
 
 #### Here’s why it’s not good:
 
-1. It doesn’t provide information on how it should be tested.
-2. It doesn’t cover any concerns or additional implications that might be related to the changeset (in this pull request, I don’t really think there were any, but I think with a larger pull request that touches more classes, this might be a problem).
-3. The language used in the title is okay, but it’s not completely clear. “point award” is referencing a model called `PointAward` and yet “vote” is actually referencing a model called `ForumVote`. For anyone that regularly looks at this code, they will likely immediately know what I’m talking about, but if someone new to the application were to look at this pull request, they might not know what a “point award” is (or if it’s a model even) or maybe they will go looking for a model called Vote and be absolutely confused when they don’t see anything named that.
+* It doesn’t provide information on how it should be tested.
+* It doesn’t cover any concerns or additional implications that might be related to the changeset (in this pull request, I don’t really think there were any, but I think with a larger pull request that touches more classes, this might be a problem).
+* The language used in the title is okay, but it’s not completely clear. “point award” is referencing a model called `PointAward` and yet “vote” is actually referencing a model called `ForumVote`. For anyone that regularly looks at this code, they will likely immediately know what I’m talking about, but if someone new to the application were to look at this pull request, they might not know what a “point award” is (or if it’s a model even) or maybe they will go looking for a model called Vote and be absolutely confused when they don’t see anything named that.
 
 **A pull request should direct people to the appropriate parts of the application that are touched without confusion or having to ask for more information.**
 
@@ -73,22 +73,22 @@ This is where things start to get more subjective. I’m using an example of a v
 
 #### Here’s why it’s good:
 
-1. Its title expresses an objective and explains what mechanisms will be used to achieve it without being overly technical.
-2. The description is well-formatted using Markdown so that it is readable to the reviewer. Obvious? Yeah, but when you’re conveying a lot of information, what looks reasonably readable to you can so easily look like a wall of text to an outsider.
-3. It explains what the benefits of the changes are in a way that makes sense both from a technical and business perspective.
-4. It breaks the changes down into a changelog.
-5. It explains/defines jargon that may or may not be familiar to the reviewer.
-6. It raises concerns in a way that prompts for feedback rather than dictating the direction the conversation contained within the pull request will go.
-7. It appropriately tags people whose work is greatly affected by these changes or who may want to weigh in on the conversation.
-8. It addresses issues that are possibly not within the scope of the pull request but have been observed while working on related library code.
-9. It comprehensively covers all known [edge] cases for testing the changes.
+* Its title expresses an objective and explains what mechanisms will be used to achieve it without being overly technical.
+* The description is well-formatted using Markdown so that it is readable to the reviewer. Obvious? Yeah, but when you’re conveying a lot of information, what looks reasonably readable to you can so easily look like a wall of text to an outsider.
+* It explains what the benefits of the changes are in a way that makes sense both from a technical and business perspective.
+* It breaks the changes down into a changelog.
+* It explains/defines jargon that may or may not be familiar to the reviewer.
+* It raises concerns in a way that prompts for feedback rather than dictating the direction the conversation contained within the pull request will go.
+* It appropriately tags people whose work is greatly affected by these changes or who may want to weigh in on the conversation.
+* It addresses issues that are possibly not within the scope of the pull request but have been observed while working on related library code.
+* It comprehensively covers all known [edge] cases for testing the changes.
 
 #### Ways it could be better:
 
-1. There is a lot of acronym usage in the description of the pull request. Sometimes that’s okay when it’s a concept that is more commonly communicated as an acronym than not (API) but turning something into an acronym that is not normally communicated that way out of laziness is potentially confusing (e.g. Active Merchant as “AM”).
-2. Doesn’t really dig too deep into what underlying problem is being solved (“fraud” is mentioned, but certainly could have exposed more about how that was occurring historically)
-3. Although it explains potential test cases, it doesn’t explain how to test those. Testing billing changes in a non-production environment is not always obvious to everyone because a payment processor’s development sandbox is behaviorally different and typically has its own test credit card numbers that you can use for producing successful transactions and declined transactions.
-4. It could have explained the technicalities of the code being changed better, but in my case, this was intentional because I knew the person reviewing it was very, very familiar with the code changed.
+* There is a lot of acronym usage in the description of the pull request. Sometimes that’s okay when it’s a concept that is more commonly communicated as an acronym than not (API) but turning something into an acronym that is not normally communicated that way out of laziness is potentially confusing (e.g. Active Merchant as “AM”).
+* Doesn’t really dig too deep into what underlying problem is being solved (“fraud” is mentioned, but certainly could have exposed more about how that was occurring historically)
+* Although it explains potential test cases, it doesn’t explain how to test those. Testing billing changes in a non-production environment is not always obvious to everyone because a payment processor’s development sandbox is behaviorally different and typically has its own test credit card numbers that you can use for producing successful transactions and declined transactions.
+* It could have explained the technicalities of the code being changed better, but in my case, this was intentional because I knew the person reviewing it was very, very familiar with the code changed.
 
 
 One other thing that I like to do inside of pull requests is to spearhead conversations by making my own inline notes on code before the reviewer has the chance to do so, pointing out any areas that I am uncertain about that I am looking for suggestions on, adding additional clarity on why a particular line was changed if I think there may be even the slightest bit of confusion. That way the conversation in the pull request is bi-directional.
