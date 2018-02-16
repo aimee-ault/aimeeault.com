@@ -17,8 +17,11 @@ I continued to journal after this, but I guess for some reason, it just felt bac
 > **September 6, 2013**
 >
 > Heading to visit family today. I promised my mom that I’d visit and told my cousin that I would stop by and visit her newborn son, Blaine, but my true motivation here, aside from my feet once again shuffling relentlessly with wanderlust, is to go see Joel.
+>
 > I’m not sure how I feel because after he left Austin this spring--after I left for Croatia, I was left with a sense that he wanted more than I did. And I like him a lot but I don’t know if I’m ready to be liked at a time in my life where all I’ve been doing is letting myself disappear over and over again. I don’t know why I am doing anything that I am—all I know is that life is good and for once, ever, good is the one thing keeping me on course.
+>
 > Chris invited me to visit Colombia but I said no, which is strange of me because I used to love him and I think in some other time and place, I would have said yes, but those circumstances are neither here nor there—I’ve changed. Now he is going to Singapore and I don’t know if I will ever see him again. I like to think that the situation is more in line with other fragments of my past and that my whole relationship with him isn’t just recycled bits of Bob Dylan’s “Tangled Up in Blue,” because I just don’t have the patience for that sort of drama.
+>
 > Maybe it’s just age. Maybe it’s just my asceticism reflecting on me. Because I can’t even help but feel that any more time I give it, the more I’m wasting the only life I have.
 
 I wrote this just a few hours before Joel and I had dinner together, before having a great evening, and before even having even the slightest inkling that the person I was going to see was someone I'd completely fall in love with. It’s been 3 years since this day and some moments in those 3 years were spent at interminable crossroads where I felt conflicted urges to both book 1-way plane tickets to remote locations but also contrarily take the greatest journey I could think of, going literally _nowhere_ and being forced to face my life’s own greatest challenge: myself in the context of stability.
