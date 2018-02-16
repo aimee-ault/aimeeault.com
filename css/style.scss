@@ -56,6 +56,15 @@ article p {
   margin-bottom: 30px;
 }
 
+article img {
+  max-width: 100%;
+}
+
+article ul, article ol {
+  font-size: 1.3em;
+  padding-left: 20px;
+}
+
 p, ul {
   line-height: 1.8;
   font-size: 1.3em;

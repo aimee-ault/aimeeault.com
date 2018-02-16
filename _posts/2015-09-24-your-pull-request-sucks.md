@@ -21,13 +21,13 @@ The answer to that is: _“Maybe not, but what does it hurt to do so?”_ Who kn
 
 I’ll use examples of pull requests I have done to break down some ideas on what makes for bad, okay, and good pull requests. I feel no shame in this because I’ve learned from it! I work with several people who have produced awesome pull requests that were constructed in ways I found impressive, but putting other people’s work on display is weird and not cool, so this is sticking strictly to stuff I’ve done to highlight things.
 
-## What a Crappy Pull Request Looks Like
+### What a Crappy Pull Request Looks Like
 
 This is a pull request I did within my first month of working for Treehouse:
 
 ![](https://s3.amazonaws.com/aimeeault.com/Screen-Shot-2015-09-24-at-2.29.28-PM.png)
 
-### Here’s why it sucks:
+#### Here’s why it sucks:
 
 1. What is “the right thing”?
 2. There’s mention of BugSnag, but no link to the actual error in BugSnag.
@@ -40,11 +40,11 @@ This is a pull request I did within my first month of working for Treehouse:
 
 ![](https://s3.amazonaws.com/aimeeault.com/tumblr_nuh1vgNaCo1qbzzgco1_1280.gif)
 
-## What an OK Pull Request Looks Like
+### What an OK Pull Request Looks Like
 
 ![](https://s3.amazonaws.com/aimeeault.com/Screen-Shot-2015-09-24-at-2.37.33-PM-1024x669.png)
 
-## Here’s why it’s okay (but not necessarily good):
+#### Here’s why it’s okay (but not necessarily good):
 
 1. It references an issue (which is not always going to be available if you are building a feature or handling tech debt, but in this case, it’s applicable)
 2. It humanely explains how a model works prior to the changes to give the reviewer a comparative understanding of what changes they are about to review. After all, not every developer intimately knows all the logical constraints of every class in the application they work on.
@@ -53,7 +53,7 @@ This is a pull request I did within my first month of working for Treehouse:
 5. It explains additional requirements related to the pull request (needing to run a job to fix data)
 6. It acknowledges room for future improvements that might be outside of the scope of the pull request, in case those do come up in the discussion.
 
-## Here’s why it’s not good:
+#### Here’s why it’s not good:
 
 1. It doesn’t provide information on how it should be tested.
 2. It doesn’t cover any concerns or additional implications that might be related to the changeset (in this pull request, I don’t really think there were any, but I think with a larger pull request that touches more classes, this might be a problem).
@@ -63,7 +63,7 @@ This is a pull request I did within my first month of working for Treehouse:
 
 ![](https://s3.amazonaws.com/aimeeault.com/anigif_enhanced-buzz-4693-1416329884-4.gif)
 
-## What a Good Pull Request Looks Like
+### What a Good Pull Request Looks Like
 
 This is where things start to get more subjective. I’m using an example of a very large pull request I worked on a few months ago for this, in which I was maybe overly cautious about, but I think some the ideas surrounding it can be applicable to smaller pull requests as well. Is this pull request the best pull request in the history of the world? No, of course not. In fact, a few small-ish bugs emerged from it despite having a fair amount of clarity. The point is that it minimizes confusion about the intent of the pull request.
 
@@ -71,7 +71,7 @@ This is where things start to get more subjective. I’m using an example of a v
 ![](https://s3.amazonaws.com/aimeeault.com/Screen-Shot-2015-09-24-at-2.57.01-PM-1024x967.png)
 ![](https://s3.amazonaws.com/aimeeault.com/Screen-Shot-2015-09-24-at-2.57.29-PM-1024x810.png)
 
-### Here’s why it’s good:
+#### Here’s why it’s good:
 
 1. Its title expresses an objective and explains what mechanisms will be used to achieve it without being overly technical.
 2. The description is well-formatted using Markdown so that it is readable to the reviewer. Obvious? Yeah, but when you’re conveying a lot of information, what looks reasonably readable to you can so easily look like a wall of text to an outsider.
@@ -83,7 +83,7 @@ This is where things start to get more subjective. I’m using an example of a v
 8. It addresses issues that are possibly not within the scope of the pull request but have been observed while working on related library code.
 9. It comprehensively covers all known [edge] cases for testing the changes.
 
-### Ways it could be better:
+#### Ways it could be better:
 
 1. There is a lot of acronym usage in the description of the pull request. Sometimes that’s okay when it’s a concept that is more commonly communicated as an acronym than not (API) but turning something into an acronym that is not normally communicated that way out of laziness is potentially confusing (e.g. Active Merchant as “AM”).
 2. Doesn’t really dig too deep into what underlying problem is being solved (“fraud” is mentioned, but certainly could have exposed more about how that was occurring historically)
