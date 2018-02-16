@@ -23,7 +23,7 @@ I’ll use examples of pull requests I have done to break down some ideas on wha
 
 ### What a Crappy Pull Request Looks Like
 
-This is a pull request I did within my first month of working for Treehouse:
+Prior to working at Treehouse, I used a system called Phabricator at DeviantArt. It was originally an internal product made by Facebook and had a project management tool for doing code reviews called _Differential_. It was sort of similar in concept to a Github pull request, but different enough that I was pretty far removed from the concept of any kind of engineering culture behind pull requests. So when I waltzed into my job at Treehouse and started slopping together pull requests in Github for the first time, it was a hot mess, as you can see here:
 
 ![](https://s3.amazonaws.com/aimeeault.com/Screen-Shot-2015-09-24-at-2.29.28-PM.png)
 
@@ -41,6 +41,8 @@ This is a pull request I did within my first month of working for Treehouse:
 ![](https://s3.amazonaws.com/aimeeault.com/tumblr_nuh1vgNaCo1qbzzgco1_1280.gif)
 
 ### What an OK Pull Request Looks Like
+
+Eventually, I started to figure out that not taking the time to write out a meaningful message to go along with my pull request added significant traction and pushback on getting it merged. As it turns out, even within your organization, people expect you to have good communication skills to help ease them into things you're working on. So I started including a basic backstory to the code I was trying to merge:
 
 ![](https://s3.amazonaws.com/aimeeault.com/Screen-Shot-2015-09-24-at-2.37.33-PM-1024x669.png)
 
@@ -98,5 +100,3 @@ I like to think of writing pull requests like hosting an out-of-town guest. We h
 It’s common as a developer to think about learning from other developers from a strictly technical perspective: “Bob has more experience with this system than I do and can share information with me about it” or “Lisa is really good with CoffeeScript and might know of something that works better here…” but on a daily basis, every time you are interacting with other developers, you are subconsciously learning something about communication by trial and error. Any time you walk into a dead end with someone through miscommunication or find that something is useful to another person, that’s noteworthy and should impact how you verbalize things in the future! Don’t make people’s brains explode.
 
 ![](https://s3.amazonaws.com/aimeeault.com/irCpBtzWVDIeI.gif)
-
-I’d love to hear other developers’ thoughts, stories, and musings on how they set up pull requests and ways they’ve found room for improvement. Do you hate my principles? Do you love them? Do you have your own different standards? Comment below.
