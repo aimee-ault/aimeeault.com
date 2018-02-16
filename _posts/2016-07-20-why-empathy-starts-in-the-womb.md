@@ -1,7 +1,7 @@
 ---
 layout: inner
 position: left
-title: 'I Hope My Child Isn't a Jerk (or Why Learning Empathy Starts in the Womb)'
+title: 'I Hope My Child Isn´t a Jerk (or Why Learning Empathy Starts in the Womb)'
 date: 2016-02-05 23:44:30
 categories: parenting personal
 tags: parenting henry personal
