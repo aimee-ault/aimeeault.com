@@ -7,6 +7,8 @@ categories: development
 tags: code programming
 ---
 
+# Your Pull Request Sucks (or Does It?)
+
 One of the things that slows me down the most as a developer is getting roadblocked on a pull request. I can spend a frivolous amount of time, say 15 minutes, actually producing and testing my changes and then on rare occasion be stuck waiting hours or days for it to be reviewed.
 
 There’s only so much you can do to alter another person’s availability to review your code, but what hit me over time is that other developers are like me: they switch contexts just as much as they switch git branches. People need context! Unfortunately, reading a diff is not a fantastic way to establish context and can take just as much time as it takes to review the PR itself. And not having context can cause people to procrastinate or simply forget to review your pull request until you bug them to do so.
