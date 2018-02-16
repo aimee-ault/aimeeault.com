@@ -13,7 +13,7 @@ I’m currently 16 weeks pregnant. Around this time in the pregnancy, my little 
 
 Even though I know my words can’t be understood this early, I can’t help but be self-conscious. My tone will impart happiness, sadness, anger, and a range of emotions that I don’t yet want permeating into the safety of my womb. And yet the world goes on around me, and I have to harness these emotions while conceding to my child’s personal fragility. That is the start of motherhood, scary as it is.
 
-!()[http://aimeeault.com/wp-content/uploads/2016/07/giphy.gif]
+![](http://aimeeault.com/wp-content/uploads/2016/07/giphy.gif)
 
 Being self-conscious of my voice means being more aware of how I talk and interact with others. I have a much broader span of empathy than I have ever had before and yet at the same time, if there was ever a time to yell loudly and proudly, it’s now. I don’t want my baby to be a jerk, and I want to lead by example in being a kind person.
 
