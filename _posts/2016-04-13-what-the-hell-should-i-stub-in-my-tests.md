@@ -186,7 +186,7 @@ With this, I can simply call `stub_successful_cc_purchase` from any test and kno
 
 Look, I know how it is. You've got a deadlined PR open. And you just did. not. have. time. for. specs. So you throw together some half-assed specs like a house of cards. There's a difference between stubbing for good reason and stubbing literally everything, including private methods in the same class.
 
-### Terrible contrived example:
+#### Terrible contrived example:
 
 ```ruby
 class Item
