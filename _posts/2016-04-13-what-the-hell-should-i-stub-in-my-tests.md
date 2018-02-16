@@ -4,7 +4,7 @@ position: left
 title: 'What the Hell Should I Stub in My Tests?'
 date: 2016-02-05 23:44:30
 categories: development
-tags: code ruby rails elasticsearch
+tags: code ruby rails testing
 ---
 
 # What the Hell Should I Stub in My Tests?
@@ -105,14 +105,14 @@ Occasionally, I come across unit tests for ActiveRecord models that test against
 
 For example, you shouldn't need to test for persistence on creation of an ActiveRecord model. If you have a valid model, it's implicit that it will properly be saved. However, behaviorally, it's fair game to test your validations.
 
-### Bad test:
+#### Bad test:
 
 ```ruby
 user = User.create(email: "foo@bar.com", name: "Bob")
 expect(user.persisted?).to be_truthy
 ```
 
-### Good test:
+#### Good test:
 
 ```ruby
 user = User.new(email: "foo@bar.com", name: nil)
