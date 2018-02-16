@@ -66,6 +66,7 @@ Having these conversations sooner than later will save you headaches in the futu
 ![](https://s3.amazonaws.com/aimeeault.com/anigif_enhanced-5723-1415662903-7.gif)
 
 ### Is there something else that will do this better?
+
 This is awkward. Someone has just written a large pull request but you know of a very simple gem or library that does exactly what they just labored over, only the gem/library you know of does it… better or more thoroughly.  Do you say something? You should. You should also leave that decision in their hands of what they want to do with that information, awkward as it is.
 
 ### Remember, your coworkers are humans too.
