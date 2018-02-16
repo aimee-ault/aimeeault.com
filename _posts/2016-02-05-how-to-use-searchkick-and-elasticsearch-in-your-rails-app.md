@@ -264,7 +264,7 @@ class MovieSearch
     constraints[:where] = where
     constraints[:order] = order
 
-    Movie.search(query, options)
+    Movie.search(query, constraints)
   end
 
   def order
@@ -305,7 +305,7 @@ class MovieSearch
     constraints[:where] = where
     constraints[:order] = order
 
-    Movie.search(query, options)
+    Movie.search(query, constraints)
   end
 
   def where
@@ -356,7 +356,7 @@ class Search
     constraints[:where] = where
     constraints[:order] = order
 
-    search_class.search(query, options)
+    search_class.search(query, constraints)
   end
 
   private def search_class
