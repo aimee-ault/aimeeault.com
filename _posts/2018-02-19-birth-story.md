@@ -2,9 +2,9 @@
 layout: inner
 position: left
 title: 'The Great Big Disgusting Birth Story'
-date: 2016-11-09 09:00:55
-categories: parenting personal
-tags: life parenting
+date: 2018-02-19 09:00:55
+categories: parenting
+tags: life parenting henry
 featured_image: ''
 ---
 
@@ -24,6 +24,8 @@ Finally, in the middle of the night on January 6 (amazing, my ovulation-based du
 
 I had my 40.5-week OB appointment that morning, and shared with my doctor the news about the contractions. Prior to this appointment, all of my cervical checks going back to 37 weeks had noted that my cervix was still high and completely closed, albeit increasingly effaced (upwards of 50%). My doula, Diana, said this was great news because effacement meant the dilation would probably go quickly. I had no personal experience with labor to know whether to believe that or not. At this appointment, I was 2 centimeters dilated. The doctor scheduled an induction for January 9th (a Monday), but remarked that she thought I would probably have the baby sometime in the next 48 hours.
 
+My OB wanted to do an AFI scan to check Henry's size and whether he had enough fluid in there still. It was one of those small portable low-quality ultrasound machines and when she turned it on, the first--and really only--thing we saw was a humongous glance at Henry's scrotum. "Well, that's definitely a male infant in there," she casually threw out. I considered the possibility that my son's ball sack might possibly be the size of a standard basketball.
+
 I called Diana and she came over to our house. Joel and I went for a walk around our neighborhood. It was frigidly cold outside and the ground was icy. I honestly don't really remember doing much at home that day. We ate spaghetti for dinner. My contractions were getting closer and closer together, but they didn't hurt at all, and I was skeptical that I was actually in labor. It kind of felt like someone had wrapped a belt around my abdomen that was tied at my back and started squeezing it tighter... the tightness would start at my back and wrap around to my front, yet it was completely painless. Diana started logging the contractions for me. They went from 7-8 minutes apart to 2-3 minutes apart in about 7 hours.
 
 As they got closer together, the pain started to dial up a tiny bit. Like the night before, it felt like mild cramps. At around 8, Diana suggested I go lay down and try to take a nap because who knows when I would get to sleep again? I went upstairs and attempted to nap but couldn't. I wasn't tired. As I walked back downstairs, I was trying to explain this to both Diana and Joel, when suddenly, I stopped dead in my tracks and said, "WOAH." I felt a gush.
@@ -42,7 +44,7 @@ Everyone talks about how painful the ride home _from_ the hospital is. No one ta
 
 The L&D triage was packed. It was extremely hot inside. A resident stopped in to collect info from me. I suspected it was his first time doing this with a woman in labor because he couldn't seem to comprehend that I needed to stop talking and breathe through my contractions. A woman in one of the other bays was measured at 3 centimeters dilated and was screaming. Another doctor stepped in and checked me. I was 3.5cm dilated. I remember feeling very apprehensive about my labor given that news in combination with my contraction timing. I thought, "If they're already this close together, how much closer together can they get? How much longer is this going to take?" I wasn't concerned with pain at the time because it felt manageable still. I'd had worse pain during periods when I was a teenager.
 
-The doctors did a rupture-of-membrane test and saw blood in the test. The test came back positive, but I was told that sometimes the test can return a false positive when blood is present. They decided to do an amniotic fluid index check just to be certain. We saw Henry one final time on the screen and were reassured that the sac was still intact. I was given either the option of staying in the triage untiL I could be admitted or going home. Given how uncomfortable the triage was with all the screaming and dry heat, I decided to go home and labor some more there.
+The doctors did a rupture-of-membrane test and saw blood in the test. The test came back positive, but I was told that sometimes the test can return a false positive when blood is present. They decided to do an amniotic fluid index check just to be certain. We saw Henry one final time on the screen and were reassured that the sac was still intact. I was given either the option of staying in the triage until I could be admitted or going home. Given how uncomfortable the triage was with all the screaming and dry heat, I decided to go home and labor some more there.
 
 ### Crackers and Vomiting and The Birth Ball
 
@@ -116,7 +118,7 @@ Finally, we resumed pushing again and had to push for 10 seconds at a time each 
 
 Everyone was commenting that they could see his head and how much hair he had. I didn't care.
 
-After 20 minutes of feeling the ring of fire, I was absolutely tired of feeling it and decided to take matters into my own hands and ignored the nurse's cues to push. Instead, I just started randomly pushing as much as I can. The nurse made the remark to another delivery nurse, "We need to get the doctor back in here immediately. She's about to deliver. Get NICU too." This only egged me on to muster whatever little strength I had left in me to push, push, push, and push.
+After 20 minutes of feeling the ring of fire, I was absolutely tired of feeling it and decided to take matters into my own hands and ignored the nurse's cues to push. Instead, I just started randomly pushing as much as I could. The nurse made the remark to another delivery nurse, "We need to get the doctor back in here immediately. She's about to deliver. Get NICU too." This only egged me on to muster whatever little strength I had left in me to push, push, push, and push.
 
 ### Out at Last
 
@@ -132,6 +134,6 @@ Finally, family came in to meet Henry. I was left alone for a while. Someone ver
 
 I asked a nurse to help me get to the bathroom after the delivery. Two nurses and Diana stood in the bathroom with me as I failed to pee. One nurse said it was very common, but I was really upset because the urgency I had to go was very intense. They suggested using a catheter to drain the urine, which I agreed to, asking Diana to get any family in the delivery room to leave so this could happen.
 
-The nurse drained over 950ml of urine out of me. The pee hat was completely full. She said it was one of the most impressive catheter urine drains she'd ever seen and that my kidneys must have done an amazing job getting all the fluid out so quickly.
+The nurse drained over 950ml of urine out of me. The pee hat was completely full. She said it was one of the most impressive catheter urine drains she'd ever seen and that my kidneys must have done an amazing job getting all the fluid out so quickly. I'm not going to lie: when I envisioned all the compliments I could get in my L&D experience, I don't really think any of the "she's so graceful" or "she cares about her baby and it's obvious" thoughts trumps the idea that I peed an impressive amount of pee into a plastic pee hat.
 
-Shortly after, we finally left to go over to the recovery room. From here on out, the experience was unremarkable and boring. I was released in a timely matter.
+Shortly after, we finally left to go over to the recovery room. From here on out, the experience was unremarkable and boring, which is generally what you want in a L&D experience. I was released in a timely matter and naturally, when we arrived home, Henry pooped and peed in places we never imagined he could poop or pee. And that's how my life as a parent began.
