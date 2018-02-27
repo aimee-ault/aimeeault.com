@@ -1,12 +1,14 @@
 ---
 layout: inner
 position: left
-title: 'The Great Big Disgusting Birth Story'
+title: 'My Great Big Disgusting Birth Story'
 date: 2018-02-19 09:00:55
 categories: parenting
 tags: life parenting henry
 featured_image: ''
 ---
+
+# My Great Big Disgusting Birth Story
 
 Around Henry's first birthday, I sat down and started to reflect on how large he was. He was nearly triple his birthweight and naturally my brain went back in time to my labor and I felt a sense of relief that I didn't give birth to a 22-pound child. However, the moment did force me to relive my entire labor, remembering each fine detail and what better a time than that to capitalize on the moment with ceremonial writing?
 

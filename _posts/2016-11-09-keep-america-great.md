@@ -8,6 +8,8 @@ tags: life politics
 featured_image: ''
 ---
 
+# Keep America Great
+
 Days before this election season came to an end, I shut people out who tried to talk to me about it. I voted, I have strong political opinions, but emotionally, I couldn’t handle the discussion—even though nearly everyone attempting to instigate opined the same beliefs. Anxiety washed over me.
 
 And as the election results came in, and I watched, I broke down and cried. I’m not angry. I don’t like Donald Trump. I don’t like Hilary Clinton either. I don’t like Gary Johnson. I don’t like Jill Stein. I didn’t want any of them leading our country.
