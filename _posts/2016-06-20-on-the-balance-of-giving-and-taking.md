@@ -5,6 +5,7 @@ title: 'On the Balance of Giving and Taking and Gratitude'
 date: 2016-06-20 23:44:30
 categories: personal
 tags: personal morals
+hidden: true
 ---
 
 # On The Balance of Giving and Taking and Gratitude
