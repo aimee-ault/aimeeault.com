@@ -7,6 +7,8 @@ categories: development
 tags: code programming
 ---
 
+# R.I.P. My Beautiful Syntax: Considering the End Lifecycle of Successful Code
+
 As a software developer, there is rarely a moment in my day where I drop everything I am doing and exclaim, "You know, I should delete this thing I wrote 3 years ago!" I'm too swept up in other things. Personally, I'm more inclined to delete someone _else's_ code--and that's solely because my job role currently is dealing with critical bugs--but if I were doing more feature development, I would probably find myself spending more time thinking about how to write _new_ code on top of old code, rather than cleaning up existing code that is probably unrelated to what I’m working on.
 
 In either case, there’s some chance I may refactor code, but it’s rare that on any given day that I will happen to delete a method and even more rare that I will delete an entire class or file. Typically though, if I am deleting code, it’s probably because I am refactoring it.
