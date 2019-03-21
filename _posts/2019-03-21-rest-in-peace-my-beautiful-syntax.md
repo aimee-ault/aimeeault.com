@@ -44,7 +44,7 @@ But, how many times in my day do you think I'm lingering around code for connect
 ## Technical Debt Should Be Roadmapped if Possible
 
 
-Technical debt has a weird stigma. Outside of development, no one wants to think about it because it steals time from new feature development. Which is exactly why I want to advocate for discussing it early in a project's lifecycle, during the planning phase so that in months time, it’s more of an expectation than an unwanted surprise.
+Technical debt has a weird stigma. Outside of development, no one wants to think about it because it steals time from new feature development. Which is exactly why I want to advocate for discussing it early in a project's lifecycle, during the planning phase so that in a few months' time, it’s more of an expectation than an unwanted surprise.
 
 You might think, "But that's crazy talk. Who the hell is talking about technical debt before it even _exists_?" And bear with me. If you talk about a problem before it even exists that likely _will exist_, it fails to become a problem or a debt because it instead becomes a part of the solution that is built. You don’t have to refer to it as technical debt. But you do have to acknowledge the questions: “Is this thing I’m building permanent? Or do we need to come back and clean it up in half a year?”
 
